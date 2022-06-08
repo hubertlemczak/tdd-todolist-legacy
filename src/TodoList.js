@@ -17,7 +17,7 @@ class TodoList {
 
   showAll20() {
     for (let i = 0; i < this.items.length; i++) {
-      this.items[i].text = this.items[i].text.slice(0, 20) + '...';
+      this.items[i].text = this.items[i].text.substring(0, 20) + '...';
     }
     return this.items;
   }
