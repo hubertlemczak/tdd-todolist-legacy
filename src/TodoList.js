@@ -15,6 +15,15 @@ class TodoList {
     return this.items;
   }
 
+  showAll20() {
+    
+    for (let i = 0; i < this.items.length; i++) {
+      // console.log('yerr',this.items[i].text);
+      (this.items[i].text) = (this.items[i].text).slice(0, 20) + '...';
+    }
+    return this.items 
+  }
+
   setComplete(id) {
     const item = this.findBy(id);
     item.status = 'complete';
