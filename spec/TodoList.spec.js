@@ -61,9 +61,10 @@ describe('TodoList', () => {
     // execute
     todoList.create("turn the heating on please cause i'm cold!");
     todoList.create('Do the washing up my clothes are dirty');
+    const result = todoList.showAll20();
 
     // verify
-    expect(todoList.showAll()).toEqual(expected);
+    expect(result).toEqual(expected);
   });
 
   it('sets item to be complete if found', () => {
@@ -106,7 +107,7 @@ describe('TodoList', () => {
   it('gets complete items', () => {
     // set up
     const item1 = todoList.create('turn the heating on!');
-    const item2 = todoList.create('Do the washing up');
+    todoList.create('Do the washing up');
     todoList.setComplete(item1.id);
     const expected = [item1];
 
@@ -142,7 +143,7 @@ describe('TodoList', () => {
 
   it('deletes item by id', () => {
     // set up
-    const item1 = todoList.create('turn the heating on!');
+    todoList.create('turn the heating on!');
     const expected = {
       id: 1,
       text: 'turn the heating on!',

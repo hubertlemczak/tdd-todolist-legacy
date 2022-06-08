@@ -14,3 +14,10 @@
 
 METHODS:
 showAll20() => ([{}])
+
+- show all items
+- get text key
+- text value
+  turn the heating on please cause i'm cold!
+  => turn the heating on ...
+- slice(20) + '...'
